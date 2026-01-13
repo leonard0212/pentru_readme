@@ -2,9 +2,8 @@
 
 **Disciplina:** Rețele Neuronale
 **Instituție:** POLITEHNICA București – FIIR
-**Student:** [Nume Prenume]
-**Link Repository GitHub:** https://github.com/[user]/PCB-Deffects-Detector
-**Data predării:** [Data]
+**Student:** Popescu Leonard
+**Link Repository GitHub:** https://github.com/leoanrd0212/PCB-Deffects-Detector
 
 ---
 
@@ -18,7 +17,7 @@ Această etapă vizează antrenarea efectivă a modelului YOLOv8 definit în arh
 
 ### Tabel Hiperparametri și Justificări
 
-Pentru antrenarea modelului de detectare a obiectelor (Object Detection), am utilizat arhitectura **YOLOv8n (nano)** datorită vitezei mari de inferență, esențială pentru aplicații de tip bandă transportoare.
+Pentru antrenarea modelului de detectare a obiectelor (Object Detection), am utilizat arhitectura **YOLO)** datorită vitezei mari de inferență, esențială pentru aplicații de tip bandă transportoare.
 
 | **Hiperparametru** | **Valoare Aleasă** | **Justificare** |
 |--------------------|-------------------|-----------------|
@@ -32,10 +31,7 @@ Pentru antrenarea modelului de detectare a obiectelor (Object Detection), am uti
 
 ### Procesul de Antrenare
 
-Antrenarea s-a realizat folosind biblioteca `ultralytics`. Setul de date a fost împărțit în:
-- **Train:** 70%
-- **Validation:** 15%
-- **Test:** 15%
+Antrenarea s-a realizat folosind biblioteca `ultralytics`. 
 
 Comanda de antrenare (exemplu):
 ```python
