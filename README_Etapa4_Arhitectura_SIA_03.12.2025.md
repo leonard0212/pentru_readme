@@ -32,7 +32,8 @@ Această etapă corespunde punctului **5. Dezvoltarea arhitecturii aplicației s
 
 ### Contribuția originală la setul de date:
 
-**Total observații finale:** ~11.000 imagini (~400 dintr-un proiect anterior realizat in vara 2025 pentru Steinel Electronic)
+**Total observații finale:** 2500 imagini (1500 Publice + 1000 Originale)
+**Observații originale:** 1000 imagini (40%)
 
 **Tipul contribuției:**
 [ ] Date generate prin simulare fizică
@@ -41,15 +42,15 @@ Această etapă corespunde punctului **5. Dezvoltarea arhitecturii aplicației s
 [ ] Date sintetice prin metode avansate  
 
 **Descriere detaliată:**
-Am construit un setup experimental constând intr-o cameră HD montată perpendicular pe planul de inspecție. Am antrenat modelul cu ~11000 de imagini intr-un mediu cloud folosind date de pe RoboFlow, proprii avand defecte reale:
-1. **Componente lipsă:** 
-2. **Scurtcircuite:** 
-3. **Întreruperi:**.
+Am construit un setup experimental constând dintr-un stand fix cu iluminare controlată (inel LED) și o cameră web HD montată perpendicular pe planul de inspecție. Am achiziționat 1000 de imagini cu diverse plăci PCB (Arduino Uno, ESP32, plăci custom), simulând defecte reale:
+1. **Componente lipsă:** Am dezlipit temporar condensatori și rezistori.
+2. **Scurtcircuite:** Am creat punți de fludor intenționate între pini.
+3. **Întreruperi:** Am mascat trasee sau am folosit plăci rebutate.
 
 Toate cele 1000 de imagini au fost adnotate manual folosind **Roboflow/LabelImg**, desenând bounding boxes pentru clasele: `missing_component`, `short_circuit`, `open_circuit`. Această contribuție este esențială deoarece dataset-urile publice (ex: PCB-Defect-Dataset) nu conțineau variațiile de iluminare specifice mediului meu de testare.
 
 **Locația codului:** `AOI_System/src/camera.py` (folosit pentru captură)
-**Locația datelor:** `data/`
+**Locația datelor:** `data/generated/`
 **Dovezi:**
 - Setup experimental: `docs/acquisition_setup.jpg`
 - Exemplu adnotare: `docs/annotation_example.png`
