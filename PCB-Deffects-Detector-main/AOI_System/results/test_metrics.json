@@ -1,0 +1,9 @@
+{
+    "epoch": 52,
+    "precision": 0.97654,
+    "recall": 0.98117,
+    "map50": 0.98588,
+    "map50-95": 0.56289,
+    "val_box_loss": 1.52447,
+    "val_cls_loss": 0.61514
+}
