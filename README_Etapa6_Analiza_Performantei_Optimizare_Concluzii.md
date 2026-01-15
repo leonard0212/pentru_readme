@@ -2,8 +2,8 @@
 
 **Disciplina:** Rețele Neuronale
 **Instituție:** POLITEHNICA București – FIIR
-**Student:** [Nume Prenume]
-**Link Repository GitHub:** https://github.com/[user]/PCB-Deffects-Detector
+**Student:** Popescu Leonard
+**Link Repository GitHub:** https://github.com/leonard0212/PCB-Deffects-Detector
 **Data predării:** [Data Curentă]
 
 ---
@@ -22,10 +22,10 @@ Am realizat un proces iterativ de optimizare, testând diferite arhitecturi și 
 
 | Experiment ID | Model | Batch Size | Learning Rate | Epochs | Augmentări | mAP@50 | Observații |
 |---|---|---|---|---|---|---|---|
-| **EXP_01** (Baseline) | YOLOv8n | 16 | 0.01 | 50 | Standard | 0.78 | Modelul din Etapa 5. Rezultate decente, dar cu unele alarme false. |
-| **EXP_02** | YOLOv8n | 32 | 0.005 | 50 | +Mosaic (0.5) | 0.81 | Creșterea batch-ului și augmentarea Mosaic au redus overfitting-ul. |
-| **EXP_03** | YOLOv8s | 16 | 0.01 | 50 | +Mosaic (0.5) | 0.84 | Modelul 'small' (v8s) e mai precis, dar inferența a crescut la ~28ms (prea lent). |
-| **EXP_04** (Final) | **YOLOv8n** | **16** | **0.001** | **100** | **+Mosaic (1.0), +Mixup (0.2)** | **0.89** | **Cel mai bun balans viteză/acuratețe.** LR scăzut și augmentări puternice. |
+| **EXP_01** (Baseline) | YOLOv11n | 16 | 0.01 | 50 | Standard | 0.78 | Modelul din Etapa 5. Rezultate decente, dar cu unele alarme false. |
+| **EXP_02** | YOLOv11n | 32 | 0.005 | 50 | +Mosaic (0.5) | 0.81 | Creșterea batch-ului și augmentarea Mosaic au redus overfitting-ul. |
+| **EXP_03** | YOLOv11s | 16 | 0.01 | 50 | +Mosaic (0.5) | 0.84 | Modelul 'small' (v8s) e mai precis, dar inferența a crescut la ~28ms (prea lent). |
+| **EXP_04** (Final) | **YOLOv11n** | **16** | **0.001** | **100** | **+Mosaic (1.0), +Mixup (0.2)** | **0.89** | **Cel mai bun balans viteză/acuratețe.** LR scăzut și augmentări puternice. |
 
 **Modelul Final Ales:** **EXP_04 (YOLOv8n Optimised)**
 **Motivație:** A atins cel mai bun scor mAP@50 (0.89) păstrând viteza de inferență rapidă (~12ms) necesară benzii transportoare. Varianta YOLOv8s (EXP_03) a fost respinsă din cauza latenței ridicate.
@@ -77,7 +77,7 @@ Pentru a integra modelul optimizat și a îmbunătăți experiența utilizatorul
 
 ## 4. Concluzii Finale și Lecții Învățate
 
-Proiectul **PCB Defects Detector** a demonstrat fezabilitatea utilizării rețelelor neuronale (YOLOv8) pentru inspecția automată în timp real, cu costuri reduse.
+Proiectul **PCB Defects Detector** a demonstrat fezabilitatea utilizării rețelelor neuronale (YOLOv11) pentru inspecția automată în timp real, cu costuri reduse.
 
 **Concluzii:**
 *   **Arhitectura:** Modelul YOLOv8n este suficient de puternic pentru defecte vizuale macroscopice, rulând eficient pe hardware consumer.
