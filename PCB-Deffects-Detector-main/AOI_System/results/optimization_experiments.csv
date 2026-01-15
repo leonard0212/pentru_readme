@@ -1,0 +1,5 @@
+experiment_id,model_architecture,batch_size,learning_rate,epochs,aug_mosaic,aug_mixup,map50,map50_95,inference_time_ms
+EXP_01,YOLOv8n,16,0.01,50,0.0,0.0,0.78,0.55,12.5
+EXP_02,YOLOv8n,32,0.005,50,0.5,0.0,0.81,0.59,12.2
+EXP_03,YOLOv8s,16,0.01,50,0.5,0.0,0.84,0.63,28.4
+EXP_04,YOLOv8n,16,0.001,100,1.0,0.2,0.89,0.68,12.6
